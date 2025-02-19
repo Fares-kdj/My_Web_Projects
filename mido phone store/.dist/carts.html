@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>سلة ميدو</title>
+  <link rel="stylesheet" href="carts.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+</head>
+<body>
+  <!-- En-tête -->
+  <header>
+    <div class="navbar">
+      <a href="index.html"><img class="logo" src="assets/call.png" alt=""></a>
+      <h1>مرحبًا بكم في متجر ميدو للهواتف الذكية</h1>
+      <!-- Icone de panier avec lien vers carts.html -->
+      <a href="#">
+        <div class="cart-icon">
+          🛒 <span id="cart-count">0</span>
+        </div>
+      </a>
+    </div>
+  </header>
+
+
+
+  <div class="panier">سلة المشتريات</div>
+  <div class="product-table">
+  <!-- Tableau de panier -->
+  <table id="product-details">
+    <thead>
+      <tr>
+        <th>الرقم</th>
+        <th>صورة الهاتف</th>
+        <th>نوع الهاتف</th>
+        <th>السعر القديم</th>
+        <th>السعر الجديد</th>
+        <th>حجم الشاشة</th>
+        <th>الذاكرة</th>
+        <th>الكاميرا الخلفية</th>
+        <th>الكاميرا الأمامية</th>
+        <th>البطارية</th>
+        <th>النظام</th>
+        <th>الإجراءات</th>
+      </tr>
+    </thead>
+    <tbody id="cart-items-list">
+      <!-- Les éléments du panier seront insérés ici via JavaScript -->
+    </tbody>
+  </table>
+  </div>
+  <script>
+    function toggleMenu() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('hidden');
+    }
+
+    // Récupérer les données du panier depuis localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Fonction pour afficher les informations du panier dans un tableau
+    function displayCartItems() {
+      const cartContainer = document.getElementById('cart-items-list');
+      cartContainer.innerHTML = ''; // Effacer les anciens éléments
+
+      if (cart.length > 0) {
+        // Créer une ligne pour chaque produit du panier
+        cart.forEach((item, index) => {
+          const row = document.createElement('tr');
+
+          // Créer les cellules pour le numéro, image, nom, prix, caractéristiques et boutons
+          row.innerHTML = `
+            <td>${index + 1}</td>
+            <td><img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; object-fit: cover;"></td>
+            <td>${item.name}</td>
+            <td>${item.oldPrice} دج</td>
+            <td>${item.newPrice} دج</td>
+            <td>${item.screenSize}</td>
+            <td>${item.memory}</td>
+            <td>${item.mainCamera}</td>
+            <td>${item.frontCamera}</td>
+            <td>${item.battery}</td>
+            <td>${item.os}</td>
+            <td>
+              <button class="delete-btn" onclick="removeItem(${index})">حذف</button>
+              <button class="order-btn" onclick="orderItem(${index})">طلب</button>
+            </td>
+          `;
+
+          // Ajouter la ligne au tableau
+          cartContainer.appendChild(row);
+        });
+      } else {
+        // Si le panier est vide, afficher un message
+        const emptyMessage = document.createElement('tr');
+        emptyMessage.innerHTML = `<td colspan="12">السلة فارغة!</td>`;  <!-- Colspan mis à jour pour 12 -->
+        cartContainer.appendChild(emptyMessage);
+      }
+    }
+
+    // Fonction pour supprimer un produit du panier
+    function removeItem(index) {
+      // Supprimer l'élément du panier
+      cart.splice(index, 1);
+      localStorage.setItem('cart', JSON.stringify(cart)); // Mettre à jour le localStorage
+      displayCartItems(); // Mettre à jour l'affichage du panier
+    }
+
+    // Fonction pour commander un produit
+    function orderItem(index) {
+      const item = cart[index];
+      alert(`تم طلب: ${item.name} بقيمة ${item.newPrice}دينار عراقي`);
+      // Vous pouvez ajouter ici la logique pour envoyer l'utilisateur à une page de commande, etc.
+    }
+
+    // Afficher les éléments du panier lors du chargement de la page
+    document.addEventListener("DOMContentLoaded", displayCartItems);
+
+    function orderItem(index) {
+  const item = cart[index];
+  
+  // Stocker les informations du produit dans le localStorage
+  localStorage.setItem('orderedItem', JSON.stringify(item));
+
+  // Rediriger vers la page de commande
+  window.location.href = 'order.html';
+}
+
+  </script>
+
+</body>
+</html>

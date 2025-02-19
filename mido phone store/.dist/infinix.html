@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ميدو - INFINIX</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+</head>
+<body>
+  <!-- En-tête -->
+  <header>
+    <div class="navbar">
+      <a href="index.html"><img class="logo" src="assets/call.png" alt=""></a>
+        <h1>مرحبًا بكم في متجر ميدو للهواتف الذكية</h1>
+        <a href="carts.html">
+          <div class="cart-icon">
+            🛒 <span id="cart-count">0</span>
+          </div>
+        </a>
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+  <!-- Menu latéral -->
+  <aside id="sidebar" class="hidden">
+    <span>المنتجات</span>
+   <div class="close-icon" onclick="toggleMenu()">x</div>
+ 
+    <ul>
+      <li><a href="index.html">Apple</a></li>
+    <li><a href="samsung.html">Samsung</a></li>
+    <li><a href="xiaomi.html">Xiaomi</a></li>
+    <li><a href="honor.html">Honor</a></li>
+    <li><a href="infinix.html">Infinix</a></li>
+    <li><a href="google.html">Google</a></li>
+    <li><a href="asus.html">Asus</a></li>
+    <li><a href="vivo.html">Vivo</a></li>
+    <li><a href="realme.html">Realme</a></li>
+    <li><a href="oppo.html">Oppo</a></li>
+
+    </ul>
+  </aside>
+
+  <!-- Section principale -->
+ 
+  <main>
+    <h2>INFINIX</h2>
+    <div class="product-container">
+      <!-- Carte produit 1 -->
+<div class="product-card">
+  <img src="assets/infinix note 8i.png" alt="هاتف">
+  <h3>infinix note 8i</h3>
+  <p>أفضل الماركات</p>
+  <p class="price">
+    <span class="old-price">300,000 دينار عراقي</span>
+    <span class="new-price">260,000 دينار عراقي</span>
+  </p>
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <button onclick="navigateToOrder('infinix note 8i', 'assets/infinix note 8i.png', 300000, 260000, '6.7 بوصة',
+  '128 جيجا بايت',
+  '48 ميجا بكسل',
+  '8 ميجا بكسل',
+  '5200 مللي أمبير',
+  'Android 10')">
+    اطلب الآن
+  </button>
+  <button onclick="addToCart('infinix note 8i', 'assets/infinix note 8i.png', 300000, 260000, '6.7 بوصة',
+  '128 جيجا بايت',
+  '48 ميجا بكسل',
+  '8 ميجا بكسل',
+  '5200 مللي أمبير',
+  'Android 10')">
+    أضف إلى السلة 🛒
+  </button>
+</div>
+
+<!-- Carte produit 2 -->
+<div class="product-card">
+  <img src="assets/Infinix Mobile - GT 20 PRO (12GB, 256GB).png" alt="هاتف">
+  <h3>Infinix Mobile - GT 20 PRO</h3>
+  <p>ماركات عالمية</p>
+  <p class="price">
+    <span class="old-price"> 580,000 دينار عراقي</span>
+    <span class="new-price"> 500,000 دينار عراقي</span>
+  </p>
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <button onclick="navigateToOrder('Infinix Mobile - GT 20 PRO', 'assets/Infinix Mobile - GT 20 PRO (12GB, 256GB).png', 580000, 500000, ' 6.67 بوصة',
+  '128 جيجا بايت',
+  '108 ميجا بكسل',
+  '32 ميجا بكسل',
+  '5000 مللي أمبير',
+  'Android 13')">
+    اطلب الآن
+  </button>
+  <button onclick="addToCart('Infinix Mobile - GT 20 PRO', 'assets/Infinix Mobile - GT 20 PRO (12GB, 256GB).png', 580000, 500000, ' 6.67 بوصة',
+  '128 جيجا بايت',
+  '108 ميجا بكسل',
+  '32 ميجا بكسل',
+  '5000 مللي أمبير',
+  'Android 13')">
+    أضف إلى السلة 🛒
+  </button>
+</div>
+
+<!-- Carte produit 3 -->
+<div class="product-card">
+  <img src="assets/Infinix Mobile - Zero 40 4G (8GB, 256GB).png" alt="هاتف">
+  <h3>Infinix Mobile - Zero 40 4G</h3>
+  <p>سعر مميز  430,000 دينار عراقي</p>
+  <p class="price">
+    <span class="old-price"> 530,000 دينار عراقي</span>
+    <span class="new-price"> 430,000 دينار عراقي</span>
+  </p>
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <button onclick="navigateToOrder('Infinix Mobile - Zero 40 4G', 'assets/Infinix Mobile - Zero 40 4G (8GB, 256GB).png', 530000, 430000, '6.78 بوصة',
+  '128 جيجا بايت',
+  '108 ميجابكسل',
+  '32 ميجابكسل',
+  '5000 مللي أمبير',
+  'Android 13')">
+    اطلب الآن
+  </button>
+  <button onclick="addToCart('Infinix Mobile - Zero 40 4G', 'assets/Infinix Mobile - Zero 40 4G (8GB, 256GB).png', 530000, 430000, '6.78 بوصة',
+  '128 جيجا بايت',
+  '108 ميجابكسل',
+  '32 ميجابكسل',
+  '5000 مللي أمبير',
+  'Android 13')">
+    أضف إلى السلة 🛒
+  </button>
+</div>
+
+<!-- Carte produit 4 -->
+<div class="product-card">
+  <img src="assets/Infinix Note 3.png" alt="هاتف">
+  <h3>Infinix Note 3</h3>
+  <p>سعر رائع فقط</p>
+  <p class="price">
+    <span class="old-price"> 180,000 دينار عراقي</span>
+    <span class="new-price"> 145,000 دينار عراقي</span>
+  </p>
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <button onclick="navigateToOrder('Infinix Note 3', 'assets/Infinix Note 3.png', 180000, 145000, '6.0 بوصة',
+  '16 جيجا بايت',
+  '13 ميجا بكسل',
+  '5 ميجا بكسل',
+  '4500 مللي أمبير',
+  'Android 6.0')">
+    اطلب الآن
+  </button>
+  <button onclick="addToCart('Infinix Note 3', 'assets/Infinix Note 3.png', 180000, 145000, '6.0 بوصة',
+  '16 جيجا بايت',
+  '13 ميجا بكسل',
+  '5 ميجا بكسل',
+  '4500 مللي أمبير',
+  'Android 6.0')">
+    أضف إلى السلة 🛒
+  </button>
+</div>
+
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

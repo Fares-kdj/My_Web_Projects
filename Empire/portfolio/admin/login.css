@@ -1,0 +1,210 @@
+body {
+  background-image: url(../../images/page.jpg);
+  background-size: cover; /* Couvre toute la zone visible */
+  background-position: center; /* Centre l'image */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  background-attachment: fixed; /* Fixe l'image pour qu'elle ne défile pas avec la page */
+  margin: 0;
+
+}
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 40px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(50, 50, 50, 0.08);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.login-container h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #202020;
+  font-family: "Berlin Sans Std Demi", sans-serif;
+  text-transform: uppercase;
+}
+
+.error-message {
+  color: #e51c24;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #202020;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #e51c24;
+  outline: none;
+}
+
+.password-toggle {
+  position: relative;
+}
+
+.password-toggle i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+}
+
+.password-toggle i:hover {
+  color: #333;
+}
+
+.smoothScroll {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  background-color: #e51c24;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.smoothScroll:hover {
+  background-color: #c21820;
+}
+/* Styles pour le conteneur du tableau de bord */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(50, 50, 50, 0.08);
+    border-radius: 8px;
+}
+
+.dashboard-container h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #202020;
+    font-family: "Berlin Sans Std Demi", sans-serif;
+    text-transform: uppercase;
+}
+
+button.smoothScroll {
+  position: relative;
+  display: flex;  /* Utilisation de inline-flex pour mieux contrôler le centrer */
+  align-items: center;
+  justify-self: center;
+  width: 360px;
+  height:50px;
+  border-radius: 5px;
+  background: #e51c24;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  margin-top: 60px; /* Ajout d'un espacement entre le bouton et les éléments au-dessus */
+}
+
+button.smoothScroll:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #c2bdba;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+
+button.smoothScroll:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+button.smoothScroll span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 25px;
+  color: #ddd8d5;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
+
+button.smoothScroll:hover span {
+  color: #e51c24;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Styles pour le tableau des projets */
+.projects-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.projects-table th,
+.projects-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.projects-table th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+    color: #202020;
+    text-transform: uppercase;
+}
+
+.projects-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Styles pour les liens de suppression */
+.delete-link {
+    color: #e51c24;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.delete-link:hover {
+    color: #c21820;
+}

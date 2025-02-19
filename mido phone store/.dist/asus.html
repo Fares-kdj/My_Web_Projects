@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ميدو - ASUS</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+</head>
+<body>
+  <!-- En-tête -->
+  <header>
+    <div class="navbar">
+      <a href="index.html"><img class="logo" src="assets/call.png" alt=""></a>
+        <h1>مرحبًا بكم في متجر ميدو للهواتف الذكية</h1>
+        <a href="carts.html">
+          <div class="cart-icon">
+            🛒 <span id="cart-count">0</span>
+          </div>
+        </a>
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+  <!-- Menu latéral -->
+  <aside id="sidebar" class="hidden">
+    <span>المنتجات</span>
+   <div class="close-icon" onclick="toggleMenu()">x</div>
+  
+    <ul>
+      <li><a href="index.html">Apple</a></li>
+    <li><a href="samsung.html">Samsung</a></li>
+    <li><a href="xiaomi.html">Xiaomi</a></li>
+    <li><a href="honor.html">Honor</a></li>
+    <li><a href="infinix.html">Infinix</a></li>
+    <li><a href="google.html">Google</a></li>
+    <li><a href="asus.html">Asus</a></li>
+    <li><a href="vivo.html">Vivo</a></li>
+    <li><a href="realme.html">Realme</a></li>
+    <li><a href="oppo.html">Oppo</a></li>
+    </ul>
+  </aside>
+
+  <!-- Section principale -->
+ 
+  <main>
+    <h2>ASUS</h2>
+    <div class="product-container">
+   <!-- Carte produit 1 -->
+<div class="product-card">
+  <img src="assets/Zenfone 8.png" alt="Zenfone 8">
+  <h3>Zenfone 8</h3>
+  <p>أفضل الماركات</p>
+  <p class="price">
+    <span class="old-price">1,000,000 دينار عراقي</span> 
+    <span class="new-price">850,000 دينار عراقي </span>
+  </p>
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <button onclick="navigateToOrder('Zenfone 8',
+                                   'assets/Zenfone 8.png',
+                                   1000000,
+                                   850000,
+                                   '5.9 بوصة',
+                                   '16 جيجابايت',
+                                   '64 ميجا بكسل',
+                                   '12 ميجا بكسل',
+                                   '4000 مللي أمبير',
+                                   'أندرويد 11، قابل للتحديث إلى أندرويد 12')">
+    اطلب الآن
+  </button>
+  <button onclick="addToCart('Zenfone 8',
+  'assets/Zenfone 8.png',
+  900000,
+  850000,
+  '5.9 بوصة',
+  '16 جيجابايت',
+  '64 ميجا بكسل',
+  '12 ميجا بكسل',
+  '4000 مللي أمبير',
+  'أندرويد 11، قابل للتحديث إلى أندرويد 12')">
+    أضف إلى السلة 🛒
+  </button>
+</div>
+
+<!-- Carte produit 2 -->
+<div class="product-card">
+  <img src="assets/Zenfone 9.png" alt="Zenfone 9">
+  <h3>Zenfone 9</h3>
+  <p>ماركات عالمية</p>
+  <p class="price">
+    <span class="old-price"> 1,100,000 دينار عراقي</span> 
+    <span class="new-price"> 1,000,000 دينار عراقي</span>
+  </p>
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <button onclick="navigateToOrder('Zenfone 9',
+                                   'assets/Zenfone 9.png',
+                                   1100000,
+                                   1000000,
+                                   '5.9 بوصة',
+                                   ' 16 جيجابايت',
+                                   '50 ميجا بكسل',
+                                   '12 ميجا بكسل',
+                                   '4300 مللي أمبير',
+                                   'Android 12')">
+    اطلب الآن
+  </button>
+  <button onclick="addToCart('Zenfone 9',
+  'assets/Zenfone 9.png',
+  1100000,
+  1000000,
+  '5.9 بوصة',
+  ' 16 جيجابايت',
+  '50 ميجا بكسل',
+  '12 ميجا بكسل',
+  '4300 مللي أمبير',
+  'Android 12')">
+    أضف إلى السلة 🛒
+  </button>
+</div>
+
+<!-- Carte produit 3 -->
+<div class="product-card">
+  <img src="assets/Zenfone 10.png" alt="Zenfone 10">
+  <h3>Zenfone 10</h3>
+  <p>سعر مميز 1,150,000 دينار عراقي</p>
+  <p class="price">
+    <span class="old-price">1,400,000 دينار عراقي</span> 
+    <span class="new-price">1,150,000 دينار عراقي دج</span>
+  </p>
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <button onclick="navigateToOrder('Zenfone 10',
+                                   'assets/Zenfone 10.png',
+                                   1400000,
+                                   1150000,
+                                   '6.0 بوصة',
+                                   '256 جيجا بايت',
+                                   '50 ميجا بكسل',
+                                   '32 ميجا بكسل',
+                                   '5000 مللي أمبير',
+                                   'Android 13')">
+    اطلب الآن
+  </button>
+  <button onclick="addToCart('Zenfone 10',
+  'assets/Zenfone 10.png',
+  1400000,
+  1150000,
+  '6.0 بوصة',
+  '256 جيجا بايت',
+  '50 ميجا بكسل',
+  '32 ميجا بكسل',
+  '5000 مللي أمبير',
+  'Android 13')">
+    أضف إلى السلة 🛒
+  </button>
+</div>
+
+<!-- Carte produit 4 -->
+<div class="product-card">
+  <img src="assets/Zenfone 11 ultra.png" alt="Zenfone 11 ultra">
+  <h3>Zenfone 11 ultra</h3>
+  <p>سعر رائع فقط</p>
+  <p class="price">
+    <span class="old-price"> 1,500,000 دينار عراقي/span> 
+    <span class="new-price"> 1,300,000 دينار عراقي</span>
+  </p>
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <button onclick="navigateToOrder('Zenfone 11 ultra',
+                                   'assets/Zenfone 11 ultra.png',
+                                   1500000,
+                                   1300000,
+                                   '6.7 بوصة',
+                                   '512 جيجا بايت',
+                                   '200 ميجا بكسل',
+                                   '40 ميجا بكسل',
+                                   '5500 مللي أمبير',
+                                   'Android 14')">
+    اطلب الآن
+  </button>
+  <button onclick="addToCart('Zenfone 11 ultra',
+  'assets/Zenfone 11 ultra.png',
+  1500000,
+  1300000,
+  '6.7 بوصة',
+  '512 جيجا بايت',
+  '200 ميجا بكسل',
+  '40 ميجا بكسل',
+  '5500 مللي أمبير',
+  'Android 14')">
+    أضف إلى السلة 🛒
+  </button>
+</div>
+
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

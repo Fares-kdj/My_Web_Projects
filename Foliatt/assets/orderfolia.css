@@ -1,0 +1,228 @@
+/* Importation de la police Montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+
+/* Réinitialisation des styles */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+}
+
+/* Style global du corps de la page */
+body {
+    background-image: url("./bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    height: 100vh;
+    min-height: 100vh;
+    background-color: #f4f4f4; 
+}
+
+/* Conteneur principal du formulaire */
+.form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0px 10px 20px rgba(0, 56, 89, 0.1);
+}
+/* Logo */
+.logo {
+    position: fixed;
+    color: white;
+    text-decoration: none;
+}
+
+/* Image du logo */
+.logo-img {
+    width: 200px;
+    height: auto;
+    margin: 50px;
+}
+
+
+.message-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.success-message {
+    color: green;
+}
+
+.error-message {
+    color: red;
+}
+
+/* Titre de la page */
+h2 {
+    font-size: 24px;
+    text-align: center;
+    color: #003859;
+    margin-bottom: 20px;
+}
+
+/* Styles pour le carrousel */
+.carousel-container {
+    margin-bottom: 20px;
+}
+
+.carousel {
+    width: 100%;
+    max-width: 400px; /* Taille maximale du carrousel */
+    margin: 0 auto;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    height: 200px; /* Hauteur fixe pour les images */
+}
+
+/* Styles pour les flèches et les points de navigation */
+.slick-prev, .slick-next {
+    background-color: rgba(0, 56, 89, 0.8);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+}
+
+.slick-prev:hover, .slick-next:hover {
+    background-color: rgba(0, 56, 89, 1);
+}
+
+.slick-prev::before, .slick-next::before {
+    color: white;
+    font-size: 20px;
+}
+
+.slick-dots {
+    bottom: -30px;
+}
+
+.slick-dots li button::before {
+    color: #003859;
+    font-size: 12px;
+}
+
+.slick-dots li.slick-active button::before {
+    color: green;
+}
+
+/* Détails du produit */
+h3 {
+    font-size: 20px;
+    color: #003859;
+    text-align: center;
+}
+
+h3 span {
+    color: green;
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Formulaire de commande */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Groupes de champs de formulaire */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-size: 14px;
+    color: #003859;
+    font-weight: bold;
+}
+
+input, textarea {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+input:focus, textarea:focus {
+    border-color: #003859;
+    outline: none;
+}
+
+/* Boutons */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #003859;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+button:hover {
+    background-color: green;
+}
+
+/* Styles pour le bouton Cancel */
+button[type="button"] {
+    background-color: #ccc;
+}
+
+button[type="button"]:hover {
+    background-color: #003859;
+}
+
+/* Responsivité */
+@media (max-width: 880px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .form-group input, .form-group textarea {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+    /* Logo */
+.logo {
+    display: none;
+}
+
+    
+}

@@ -1,0 +1,238 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdfbf1;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    padding: 0;
+}
+
+.panier {
+    font-family: 'Cairo', sans-serif;
+    justify-items: center;
+    text-align: center;
+    color: #333;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+h1 {
+    justify-items: center;
+    text-align: center;
+    color: #fff;
+    margin-left: 0;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+/* Barre de navigation */
+.navbar {
+    background-color: #00353f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    flex-direction: row-reverse; /* Inverser l'ordre des éléments */
+}
+
+.cart-icon {
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    padding: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: #430c05;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 14px;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: right;
+    table-layout: fixed; /* Ajouté pour forcer la table à s'ajuster aux largeurs de colonnes */
+    word-wrap: break-word; /* Permet de casser les mots trop longs */
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    word-wrap: break-word; /* Permet aux cellules de se casser si nécessaire */
+}
+
+th {
+    background-color: #00353f;
+    color: white;
+    font-size: 18px;
+}
+
+td {
+    background-color: #f9f9f9;
+    font-size: 16px;
+}
+
+tr:hover {
+    background-color: #e2e2e2;
+}
+
+
+button {
+    padding: 6px 12px;
+    margin: 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.order-btn {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.order-btn:hover {
+    background-color: #27ae60;
+}
+
+/* Responsivité pour les petits écrans */
+@media (max-width: 768px) {
+    /* Pour les petits écrans */
+    .navbar {
+        flex-direction: column; /* Mettre la navbar en colonne sur mobile */
+        align-items: flex-start;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .panier {
+        font-size: 24px; /* Réduire la taille de police */
+    }
+
+    h1 {
+        font-size: 22px; /* Ajuster la taille de h1 */
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    table {
+        width: 100%;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    /* Adapter les boutons */
+    button {
+        padding: 8px 14px;
+        font-size: 16px;
+    }
+
+    .delete-btn {
+        padding: 8px 14px;
+    }
+
+    .order-btn {
+        padding: 8px 14px;
+    }
+
+    .product-table {
+        display: block; /* Empiler les produits sur les petits écrans */
+        margin-top: 20px;
+    }
+
+    .product-details {
+        max-width: 90%;
+        margin-bottom: 20px;
+        text-align: center; /* Centrer les détails des produits */
+    }
+     /* Pour les petits écrans */
+     table {
+        display: block; /* Mettre la table en mode bloc pour permettre le défilement horizontal */
+        overflow-x: auto; /* Activer le défilement horizontal */
+        -webkit-overflow-scrolling: touch; /* Améliorer le défilement sur iOS */
+        white-space: nowrap; /* Empêcher le texte de se casser */
+    }
+
+    th, td {
+        text-align: left; /* Alignement à gauche sur les petits écrans pour plus de lisibilité */
+    }
+
+    th {
+        font-size: 16px; /* Réduire la taille de la police dans les titres */
+    }
+
+    td {
+        font-size: 14px; /* Réduire la taille de la police dans les données */
+    }
+}
+
+
+@media (max-width: 480px) {
+    /* Pour les très petits écrans comme les smartphones */
+    .logo {
+        width: 100px;
+    }
+
+    .panier {
+        font-size: 18px; /* Plus petit texte sur les petits écrans */
+    }
+
+    .navbar {
+        padding: 5px; /* Réduire le padding de la navbar */
+    }
+
+    table {
+        font-size: 12px; /* Réduire la taille de la police pour les petites tablettes et smartphones */
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}

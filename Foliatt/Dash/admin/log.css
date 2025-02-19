@@ -1,0 +1,109 @@
+/* Style global du corps de la page */
+body {
+    background-image: url("../../assets/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Fixe l'arrière-plan */
+    height: 100vh;
+    min-height: 100vh;
+    background-color: #f4f4f4; /* Couleur de secours */
+    overflow: hidden; /* Supprime la barre de défilement */
+    display: flex; /* Utilisation de flexbox */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    flex-direction: column; /* Aligne les éléments dans une colonne */
+}
+
+/* Container de connexion */
+.login-container {
+    width: 80%;
+    max-width: 400px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+/* Autres styles restent inchangés */
+h2 {
+    font-size: 2rem;
+    color: #003859;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #003859;
+}
+
+.form-group input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.password-toggle {
+    position: relative;
+}
+
+#togglePassword {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    color: #003859;
+    font-size: 1.2rem;
+}
+
+#togglePassword:hover {
+    color: #007bff;
+}
+
+.button-container {
+    text-align: center;
+}
+
+button {
+    background-color: #003859;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ddd;
+    color: #003859;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+}
+
+.success-message {
+    color: green;
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-control {
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 1rem;
+}

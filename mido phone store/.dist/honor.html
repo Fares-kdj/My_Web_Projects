@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ميدو - HONOR</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+</head>
+<body>
+  <!-- En-tête -->
+  <header>
+    <div class="navbar">
+      <a href="index.html"><img class="logo" src="assets/call.png" alt=""></a>
+        <h1>مرحبًا بكم في متجر ميدو للهواتف الذكية</h1>
+        <a href="carts.html">
+          <div class="cart-icon">
+            🛒 <span id="cart-count">0</span>
+          </div>
+        </a>
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+  <!-- Menu latéral -->
+  <aside id="sidebar" class="hidden">
+    <span>المنتجات</span>
+   <div class="close-icon" onclick="toggleMenu()">x</div>
+   
+    <ul>
+      <li><a href="index.html">Apple</a></li>
+    <li><a href="samsung.html">Samsung</a></li>
+    <li><a href="xiaomi.html">Xiaomi</a></li>
+    <li><a href="honor.html">Honor</a></li>
+    <li><a href="infinix.html">Infinix</a></li>
+    <li><a href="google.html">Google</a></li>
+    <li><a href="asus.html">Asus</a></li>
+    <li><a href="vivo.html">Vivo</a></li>
+    <li><a href="realme.html">Realme</a></li>
+    <li><a href="oppo.html">Oppo</a></li>
+
+    </ul>
+  </aside>
+
+  <!-- Section principale -->
+ 
+  <main>
+    <h2>HONOR</h2>
+    <div class="product-container">
+   <!-- Carte produit 1 -->
+<div class="product-card">
+  <img src="assets/Honor 30 Pro Plus.png" alt="Honor 30 Pro Plus">
+  <h3>Honor 30 Pro Plus</h3>
+  <p>أفضل الماركات</p>
+  <p class="price">
+    <span class="old-price"> 1,150,000 دينار عراقي</span>
+    <span class="new-price"> 1,000,000 دينار عراقي</span>
+  </p>
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <button onclick="navigateToOrder('Honor 30 Pro Plus',
+                                   'assets/Honor 30 Pro Plus.png',
+                                   1150000,
+                                   1000000,
+                                   '6.57 بوصة',
+                                   '256 جيجا بايت',
+                                   '50 ميجا بكسل',
+                                   '32 ميجا بكسل',
+                                   '4000 مللي أمبير',
+                                   'Android 10')">
+    اطلب الآن
+  </button>
+  <button onclick="addToCart('Honor 30 Pro Plus',
+  'assets/Honor 30 Pro Plus.png',
+  1150000,
+  1000000,
+  '6.57 بوصة',
+  '256 جيجا بايت',
+  '50 ميجا بكسل',
+  '32 ميجا بكسل',
+  '4000 مللي أمبير',
+  'Android 10')">
+    أضف إلى السلة 🛒
+  </button>
+</div>
+
+<!-- Carte produit 2 -->
+<div class="product-card">
+  <img src="assets/Honor 90.png" alt="Honor 90">
+  <h3>Honor 90</h3>
+  <p>ماركات عالمية</p>
+  <p class="price">
+    <span class="old-price"> 730,000 دينار عراقي</span>
+    <span class="new-price"> 650,000 دينار عراقي</span>
+  </p>
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <button onclick="navigateToOrder('Honor 90',
+                                   'assets/Honor 90.png',
+                                   730000,
+                                   650000,
+                                   '6.7 بوصة',
+                                   '128 جيجا بايت',
+                                   '200 ميجا بكسل',
+                                   '50 ميجا بكسل',
+                                   '5000 مللي أمبير',
+                                   'Android 13')">
+    اطلب الآن
+  </button>
+  <button onclick="addToCart('Honor 90',
+  'assets/Honor 90.png',
+  730000,
+  650000,
+  '6.7 بوصة',
+  '128 جيجا بايت',
+  '200 ميجا بكسل',
+  '50 ميجا بكسل',
+  '5000 مللي أمبير',
+  'Android 13')">
+    أضف إلى السلة 🛒
+  </button>
+</div>
+
+<!-- Carte produit 3 -->
+<div class="product-card">
+  <img src="assets/Honor 9X.png" alt="Honor 9X">
+  <h3>Honor 9X</h3>
+  <p>سعر مميز  360,000 دينار عراقي</p>
+  <p class="price">
+    <span class="old-price"> 500,000 دينار عراقي</span>
+    <span class="new-price"> 360,000 دينار عراقي</span>
+  </p>
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <button onclick="navigateToOrder('Honor 9X',
+                                   'assets/Honor 9X.png',
+                                   500000,
+                                   360000,
+                                   '6.59 بوصة',
+                                   '128 جيجا بايت',
+                                   '48 ميجا بكسل',
+                                   '16 ميجا بكسل',
+                                   '4000 مللي أمبير',
+                                   'Android 9.0')">
+    اطلب الآن
+  </button>
+  <button onclick="addToCart('Honor 9X',
+  'assets/Honor 9X.png',
+  500000,
+  360000,
+  '6.59 بوصة',
+  '128 جيجا بايت',
+  '48 ميجا بكسل',
+  '16 ميجا بكسل',
+  '4000 مللي أمبير',
+  'Android 9.0')">
+    أضف إلى السلة 🛒
+  </button>
+</div>
+
+<!-- Carte produit 4 -->
+<div class="product-card">
+  <img src="assets/Honor View 20.png" alt="Honor View 20">
+  <h3>Honor View 20</h3>
+  <p>سعر رائع فقط</p>
+  <p class="price">
+    <span class="old-price">650,000 دينار عراقي</span>
+    <span class="new-price">580,000 دينار عراقي</span>
+  </p>
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <button onclick="navigateToOrder('Honor View 20',
+                                   'assets/Honor View 20.png',
+                                   650000,
+                                   580000,
+                                   '6.4 بوصة',
+                                   '128 جيجا بايت',
+                                   '48 ميجا بكسل',
+                                   '25 ميجا بكسل',
+                                   '4000 مللي أمبير',
+                                   'Android 9.0')">
+    اطلب الآن
+  </button>
+  <button onclick="addToCart('Honor View 20',
+  'assets/Honor View 20.png',
+  650000,
+  580000,
+  '6.4 بوصة',
+  '128 جيجا بايت',
+  '48 ميجا بكسل',
+  '25 ميجا بكسل',
+  '4000 مللي أمبير',
+  'Android 9.0')">
+    أضف إلى السلة 🛒
+  </button>
+</div>
+
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ميدو - REALME</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+</head>
+<body>
+  <!-- En-tête -->
+  <header>
+    <div class="navbar">
+      <a href="index.html"><img class="logo" src="assets/call.png" alt=""></a>
+        <h1>مرحبًا بكم في متجر ميدو للهواتف الذكية</h1>
+        <a href="carts.html">
+          <div class="cart-icon">
+            🛒 <span id="cart-count">0</span>
+          </div>
+        </a>
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+  <!-- Menu latéral -->
+  <aside id="sidebar" class="hidden">
+    <span>المنتجات</span>
+   <div class="close-icon" onclick="toggleMenu()">x</div>
+   
+    <ul>
+      <li><a href="index.html">Apple</a></li>
+    <li><a href="samsung.html">Samsung</a></li>
+    <li><a href="xiaomi.html">Xiaomi</a></li>
+    <li><a href="honor.html">Honor</a></li>
+    <li><a href="infinix.html">Infinix</a></li>
+    <li><a href="google.html">Google</a></li>
+    <li><a href="asus.html">Asus</a></li>
+    <li><a href="vivo.html">Vivo</a></li>
+    <li><a href="realme.html">Realme</a></li>
+    <li><a href="oppo.html">Oppo</a></li>
+
+    </ul>
+  </aside>
+
+  <!-- Section principale -->
+ 
+  <main>
+    <h2>REALME</h2>
+    <div class="product-container">
+    <!-- Carte produit 1 -->
+<div class="product-card">
+  <img src="assets/realme 11x 5g.jpeg" alt="هاتف">
+  <h3>realme 11x 5G</h3>
+  <p>أفضل الماركات</p>
+  <p class="price">
+    <span class="old-price">315,000 دينار عراقي</span>
+    <span class="new-price">275,000 دينار عراقي</span>
+  </p>
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <button onclick="navigateToOrder('realme 11x 5G', 'assets/realme 11x 5g.jpeg', 315000, 275000, '6.6 بوصة',
+  '128 جيجا بايت',
+  '64 ميجا بكسل',
+  '8 ميجا بكسل',
+  '5000 مللي أمبير',
+  'Android 13')">
+    اطلب الآن
+  </button>
+  <button onclick="addToCart('realme 11x 5G', 'assets/realme 11x 5g.jpeg', 315000, 275000, '6.6 بوصة',
+  '128 جيجا بايت',
+  '64 ميجا بكسل',
+  '8 ميجا بكسل',
+  '5000 مللي أمبير',
+  'Android 13')">
+    أضف إلى السلة 🛒
+  </button>
+</div>
+
+<!-- Carte produit 2 -->
+<div class="product-card">
+  <img src="assets/realme 12 pro 5g.jpeg" alt="هاتف">
+  <h3>realme 12 pro 5G</h3>
+  <p>ماركات عالمية</p>
+  <p class="price">
+    <span class="old-price">490,000 دينار عراقي</span>
+    <span class="new-price">430,000 دينار عراقي</span>
+  </p>
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <button onclick="navigateToOrder('realme 12 pro 5G', 'assets/realme 12 pro 5g.jpeg', 490000, 430000, '6.7 بوصة',
+  '128 جيجا بايت',
+  '108 ميجا بكسل',
+  '16 ميجا بكسل',
+  '5000 مللي أمبير',
+  'Android 13')">
+    اطلب الآن
+  </button>
+  <button onclick="addToCart('realme 12 pro 5G', 'assets/realme 12 pro 5g.jpeg', 490000, 430000, '6.7 بوصة',
+  '128 جيجا بايت',
+  '108 ميجا بكسل',
+  '16 ميجا بكسل',
+  '5000 مللي أمبير',
+  'Android 13')">
+    أضف إلى السلة 🛒
+  </button>
+</div>
+
+<!-- Carte produit 3 -->
+<div class="product-card">
+  <img src="assets/realme 13+.jpeg" alt="هاتف">
+  <h3>realme 13+ 5G</h3>
+  <p>سعر مميز 400,000 دينار عراقي</p>
+  <p class="price">
+    <span class="old-price">480,000 دينار عراقي</span>
+    <span class="new-price">400,000 دينار عراقي</span>
+  </p>
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <button onclick="navigateToOrder('realme 13+ 5G', 'assets/realme 13+.jpeg', 480000, 400000, '6.72 بوصة',
+  '128 جيجا بايت',
+  '108 ميجا بكسل',
+  '16 ميجا بكسل',
+  '5000 مللي أمبير',
+  '13 مع واجهة Realme UI')">
+    اطلب الآن
+  </button>
+  <button onclick="addToCart('realme 13+ 5G', 'assets/realme 13+.jpeg', 480000, 400000, '6.72 بوصة',
+  '128 جيجا بايت',
+  '108 ميجا بكسل',
+  '16 ميجا بكسل',
+  '5000 مللي أمبير',
+  '13 مع واجهة Realme UI')">
+    أضف إلى السلة 🛒
+  </button>
+</div>
+
+
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

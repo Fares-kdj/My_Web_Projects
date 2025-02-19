@@ -1,0 +1,876 @@
+/*
+
+Template 2097 Pop
+
+https://www.tooplate.com/view/2097-pop
+
+*/
+/* From Uiverse.io by Navarog21 */
+a.btn {
+  width: 10em;
+  position: relative;
+  height: 3.5em;
+  border: 3px ridge #149CEA;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none; /* Enlève le soulignement du lien */
+  display: inline-block; /* Permet de traiter l'élément comme un bouton */
+  text-align: center; /* Centrer le texte à l'intérieur */
+  line-height: 3.5em; /* Centrer le texte verticalement */
+}
+
+a.btn::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #212121;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+a.btn::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #212121;
+  transition: 0.5s;
+}
+
+a.btn:hover::before, a.btn:hover::after {
+  transform: scale(0);
+}
+
+a.btn:hover {
+  box-shadow: inset 0px 0px 25px #1479EA;
+}
+
+body {
+  font-family: 'cairo' , sans-serif;
+  font-size: 19px;
+  font-weight: 300;
+  color: white;
+  position: relative;
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+
+#tm-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/pop-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+#tm-bg:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#tm-wrap {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  min-height: 100vh;
+}
+
+p {
+  line-height: 1.9;
+  letter-spacing: 1px;
+}
+
+.tm-main-content {
+  display: flex;
+  align-items: center;
+  padding: 50px 15px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+}
+
+.tm-site-header-col {
+  display: flex;
+  align-items: center;
+}
+
+.tm-site-header {
+  margin: 10px;
+  text-align: right;
+  width: 100%;
+}
+
+.tm-nav ul {
+  padding-left: 0;
+  display: block;
+}
+
+.tm-nav li {
+  list-style: none;
+  display: inline-block;
+  border: 1px solid white;
+  /* float: right; */
+  margin: 10px;
+}
+
+.tm-nav-link {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 165px;
+  height: 165px;
+  text-align: center;
+  border: 1px solid white;
+  cursor: pointer;
+  position: relative;
+}
+
+.tm-nav-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+}
+
+.fa-3x {
+  font-size: 2.5em;
+}
+
+.product {
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.product:hover {
+  background: #2c2a35;
+  color: #a9a9a9;
+}
+
+.tm-nav-icon {
+  display: block;
+  margin-bottom: 25px;
+}
+
+/* Expanding Grid Items from Codrops */
+.tm-page-title {
+  font-weight: 300;
+  display: flex;
+  justify-content: start;
+}
+.content {
+  max-width: 370px;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.grid__item {
+  margin: 10px;
+}
+.product {
+  position: relative;
+  cursor: pointer;
+}
+
+.product__bg {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+}
+p{
+  text-align: right;
+}
+
+.product__bg,
+.product__description {
+  opacity: 0;
+  position: absolute;
+}
+
+.product__description {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.tm-fa-close {
+  font-size: 30px;
+}
+
+.details {
+  font-size: 1rem;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  pointer-events: none;
+  padding: 15px;
+  display: none;
+}
+
+.details > * {
+  position: relative;
+  opacity: 0;
+}
+
+.details--open {
+  pointer-events: auto;
+}
+
+.details__bg {
+  width: 100%;
+  max-width: 900px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.details__bg--down {
+  background: #2c2a35;
+}
+
+.details__bg {
+  padding: 50px;
+  transform-origin: 0 0;
+}
+
+.details__close {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  border: 0;
+  background: none;
+  margin: 1em;
+  cursor: pointer;
+  font-size: 0.85em;
+  color: white;
+  z-index: 1001;
+}
+
+/* Team */
+.tm-reverse-sm {
+  flex-direction: row;
+}
+
+/* Our Work */
+.tm-slider-img-link {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.slick-dots li button:before {
+  font-size: 20px;
+  color: white;
+  opacity: 1;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -40px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: deepskyblue;
+}
+
+/* Contact */
+.form-control {
+  font-size: 1.1rem;
+  border-radius: 0;
+  border: none;
+  background-color: #353541;
+  color: white;
+  padding: 0.75rem;
+}
+
+.form-control:focus {
+  color: #cecece;
+  background-color: #4d4c59;
+  border-color: transparent;
+}
+
+.tm-col-email {
+  padding-left: 0;
+}
+
+.tm-btn-submit {
+  background-color: #006599;
+}
+
+.tm-btn-gray {
+  background-color: #494752;
+  color: white;
+}
+
+.tm-btn-gray:hover {
+  background-color: #77757d;
+  color: white;
+}
+
+.btn {
+  padding: 0.5rem 2.4rem;
+  font-size: 1.2rem;
+  border-radius: 0;
+}
+
+.btn-primary {
+  border-color: transparent;
+}
+
+.btn-primary:hover {
+  background-color: #0e7fb9;
+  border-color: transparent;
+}
+/* From Uiverse.io by cssbuttons-io */ 
+.uiverse {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.uiverse:hover {
+  background-color: #45f3ff;
+  box-shadow: 0px 0px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.uiverse:active {
+  transform: translateY(-1px);
+}
+
+.inputbox-container {
+  display: flex;
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si nécessaire */
+  justify-content: space-between;
+  gap: 20px; /* Espacement entre les champs */
+  margin-bottom: 20px; /* Espacement entre les lignes */
+}
+
+.inputbox {
+  position: relative;
+  width: 48%; /* Largeur de chaque input pour qu'ils soient côte à côte */
+}
+
+.inputbox input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  color: #23242a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  z-index: 10;
+}
+
+.inputbox span {
+  position: absolute;
+  right: 0;
+  padding: 20px 10px 10px;
+  font-size: 1em;
+  color: #8f8f8f;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.inputbox input:valid ~span,
+.inputbox input:focus ~span {
+  color: #45f3ff;
+  transform: translateX(-10px) translateY(-34px);
+  font-size: 0.75em;
+}
+.inputbox input[type="text"] {
+  font-size: 1em;
+  background: transparent;
+  text-align: right; /* Alignement à droite pour l'arabe */
+  direction: rtl; /* Pour afficher le texte de droite à gauche */
+}
+
+
+.inputbox i {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #45f3ff;
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.inputbox input:valid ~i,
+.inputbox input:focus ~i {
+  height: 44px;
+}
+
+/* Style de base */
+.radio-group {
+  display: flex;
+  flex-direction: row; /* Affiche les éléments horizontalement */
+  gap: 10px; /* Espacement entre les boutons radio */
+  align-items: center; /* Centrer verticalement les éléments */
+  padding: 20px;
+}
+
+.radio-group input {
+  width: 0px;  /* Agrandir le cercle */
+  height: 0px; /* Agrandir le cercle */
+  border-radius: 40%; /* Cercle parfait */
+  appearance: none; /* Supprime l'apparence par défaut du bouton radio */
+  border: 2px solid #8f8f8f; /* Couleur du contour */
+  transition: 0.3s;
+  position: relative;
+
+}
+
+.radio-group input:checked {
+  background-color: #45f3ff; /* Couleur de fond du cercle lorsque sélectionné */
+  border-color: #45f3ff; /* Couleur du bord lorsque sélectionné */
+}
+
+.radio-group input:checked::after {
+  content: "";
+  position: absolute;
+  top: 4px; /* Position du point au centre du cercle */
+  left: 4px;
+  width: 15px; /* Taille du point à l'intérieur du cercle */
+  height: 15px; /* Taille du point à l'intérieur du cercle */
+  border-radius: 50%; /* Pour rendre le point circulaire */
+  background-color: white; /* Couleur du point sélectionné */
+}
+
+.radio-group label {
+  font-size: 1em;
+  color: #8f8f8f;
+  letter-spacing: 0.05em;
+  padding-left: 10px;
+  transition: 0.5s;
+}
+
+/* Appliquer la couleur #45f3ff lorsque le bouton radio est sélectionné */
+.radio-group input:checked + label {
+  color: #45f3ff;
+}
+
+/* From Uiverse.io by 0xnihilism */ 
+.input {
+  width: 100%;
+ 
+  height: 60px;
+  padding: 12px;
+  font-size: 18px;
+  font-family: "Courier New", monospace;
+  color: #000;
+  background-color: #fff;
+  border: 4px solid #000;
+  border-radius: 0;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 8px 8px 0 #000;
+}
+
+.input::placeholder {
+  color: #888;
+}
+
+.input:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0 #000;
+}
+
+.input:focus {
+  background-color: #000;
+  color: #fff;
+  border-color: #ffffff;
+}
+
+.input:focus::placeholder {
+  color: #fff;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.input:focus::after {
+  content: "|";
+  position: absolute;
+  right: 10px;
+  animation: blink 0.7s step-end infinite;
+}
+
+.input:valid {
+  animation: typing 2s steps(30, end);
+}
+.input-contai {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.input {
+  width: 100%;
+  height: 60px;
+  padding: 12px;
+  font-size: 18px;
+  font-family: "Courier New", monospace;
+  color: #000;
+  background-color: #fff;
+  border: 4px solid #000;
+  border-radius: 0;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 8px 8px 0 #000;
+}
+
+.input::placeholder {
+  color: #888;
+}
+
+.input:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0 #000;
+}
+
+.input:focus {
+  background-color: #010101;
+  color: #fff;
+  border-color: #d6d9dd;
+}
+
+.input:focus::placeholder {
+  color: #fff;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+  50% {
+    transform: translateX(5px) rotate(5deg);
+  }
+  75% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.input:focus {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes glitch {
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+  7% {
+    transform: skew(-0.5deg, -0.9deg);
+    opacity: 0.75;
+  }
+  10% {
+    transform: none;
+    opacity: 1;
+  }
+  27% {
+    transform: none;
+    opacity: 1;
+  }
+  30% {
+    transform: skew(0.8deg, -0.1deg);
+    opacity: 0.75;
+  }
+  35% {
+    transform: none;
+    opacity: 1;
+  }
+  52% {
+    transform: none;
+    opacity: 1;
+  }
+  55% {
+    transform: skew(-1deg, 0.2deg);
+    opacity: 0.75;
+  }
+  50% {
+    transform: none;
+    opacity: 1;
+  }
+  72% {
+    transform: none;
+    opacity: 1;
+  }
+  75% {
+    transform: skew(0.4deg, 1deg);
+    opacity: 0.75;
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.input:not(:placeholder-shown) {
+  animation: glitch 1s linear infinite;
+}
+
+.input-contai::after {
+  content: "|";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.input:focus + .input-contai::after {
+  color: #fff;
+}
+
+.input:not(:placeholder-shown) {
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0px 0px 0 #000;
+}
+
+.button {
+  --bg: #000;
+  --hover-bg: #45f3ff;
+  --hover-text: #000;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid var(--bg);
+  border-radius: 4px;
+  padding: 0.8em 2em;
+  background: var(--bg);
+  transition: 0.2s;
+}
+
+.button:hover {
+  color: var(--hover-text);
+  transform: translate(-0.25rem, -0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+}
+
+.button:active {
+  transform: translate(0);
+  box-shadow: none;
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 30px;
+  text-align: center;
+  left: 0;
+  right: 0;
+}
+
+.tm-text-highlight {
+  color: white;
+}
+.tm-text-highlight:hover {
+  color: red;
+}
+.tm-main-content.tm-footer-relative {
+  flex-direction: column;
+}
+.tm-main-content.tm-footer-relative footer {
+  position: relative;
+  bottom: 0;
+  margin-top: 50px;
+}
+
+.tm-copyright-text {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  padding: 10px 30px;
+}
+
+a,
+button {
+  transition: all 0.3s ease;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 900px) {
+  .container {
+    max-width: 900px;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 991px), (max-width: 440px) {
+  .tm-nav-link {
+    width: 145px;
+    height: 145px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 450px;
+  }
+  .content {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .tm-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .grid {
+    justify-content: flex-end;
+  }
+  .tm-col-email {
+    padding-left: 15px;
+  }
+  .tm-reverse-sm {
+    flex-direction: column-reverse;
+  }
+  .inputbox {
+    width: 100%;
+}
+.radio-group {
+  flex-direction: row; /* Reste horizontal même pour les petits écrans */
+  gap: 10px; /* Réduit l'espacement entre les éléments */
+  padding: 15px; /* Ajuste le padding pour les petits écrans */
+}
+
+.radio-group label {
+  font-size: 0.8em; /* Réduit la taille de la police pour les petits écrans */
+}
+}
+
+@media (max-width: 544px) {
+  .tm-main-content {
+    flex-direction: column;
+  }
+  .details__bg {
+    padding: 55px 40px;
+  }
+  .slick-dots li button:before {
+    font-size: 15px;
+  }
+
+  footer {
+    position: relative;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 419px) {
+  .tm-nav-link {
+    width: 120px;
+    height: 120px;
+  }
+
+  .fa-3x {
+    font-size: 2.2em;
+  }
+  .radio-group {
+    gap: 1px; /* Réduit encore l'espacement pour les écrans très petits */
+    padding: 30px;
+    /* Réduit le padding pour optimiser l'espace */
+  }
+
+  .radio-group label {
+    font-size: 0.7em; /* Taille de police encore plus petite sur très petits écrans */
+  }
+}
+

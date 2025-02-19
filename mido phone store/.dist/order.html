@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صفحة الطلب</title>
+  <link rel="stylesheet" href="order.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<header>
+  <div class="navbar">
+    <a href="index.html"><img class="logo" src="assets/call.png" alt=""></a>
+    <h1>مرحبًا بكم في متجر ميدو للهواتف الذكية</h1>
+    <a href="carts.html">
+      <div class="cart-icon">
+        🛒 <span id="cart-count">0</span>
+      </div>
+    </a>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </div>
+</header>
+
+<!-- Menu latéral -->
+<aside id="sidebar" class="hidden">
+  <span>المنتجات</span>
+  <div class="close-icon" onclick="toggleMenu()">x</div>
+  
+  <ul>
+    <li><a href="index.html">Apple</a></li>
+    <li><a href="samsung.html">Samsung</a></li>
+    <li><a href="xiaomi.html">Xiaomi</a></li>
+    <li><a href="honor.html">Honor</a></li>
+    <li><a href="infinix.html">Infinix</a></li>
+    <li><a href="google.html">Google</a></li>
+    <li><a href="asus.html">Asus</a></li>
+    <li><a href="vivo.html">Vivo</a></li>
+    <li><a href="realme.html">Realme</a></li>
+    <li><a href="oppo.html">Oppo</a></li>
+  </ul>
+</aside>
+
+<body>
+  <div class="order-container">
+    <div class="product-details">
+      <img id="product-image" src="" alt="Produit">
+      <h2 id="product-name"></h2>
+      <p>السعر القديم: <span id="old-price"></span> دينار عراقي</p>
+      <p>السعر الجديد: <span id="new-price"></span> دينار عراقي</p>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+    </div>
+
+
+    <form class="order-form">
+      <h3>معلومات الطلب</h3>
+      <label>الاسم الكامل:</label>
+      <input type="text" placeholder="أدخل اسمك" required>
+      <label>رقم الهاتف:</label>
+      <input type="tel" placeholder="أدخل رقم الهاتف" required>
+      <label>المحافظة:</label>
+      <input type="text" placeholder="ادخل المحافظة" required>
+      <label>القضاء:</label>
+      <input type="text" placeholder="ادخل القضاء" required>
+      <label>ناحية القضاء:</label>
+      <input type="text" placeholder="ناحية القضاء" required>
+      <label>اقرب نقطة دالة:</label>
+      <input type="text" placeholder="أدخل اقرب نقطة دالة" required>
+      <label>اختر اللون:</label>
+      <select name="color" required>
+        <option value="" disabled selected>اختر اللون</option>
+        <option value="black">أسود</option>
+        <option value="white">أبيض</option>
+        <option value="red">أحمر</option>
+        <option value="blue">أزرق</option>
+        <option value="green">أخضر</option>
+        <option value="yellow">أصفر</option>
+        <option value="pink">وردي</option>
+        <option value="purple">أرجواني</option>
+        <option value="orange">برتقالي</option>
+        <option value="gray">رمادي</option>
+        <option value="silver">فضي</option>
+        <option value="gold">ذهبي</option>
+        <option value="bronze">برونزي</option>
+        <option value="brown">بني</option>
+        <option value="beige">بيج</option>
+        <option value="cyan">سماوي</option>
+        <option value="magenta">أرجواني فاقع</option>
+        <option value="teal">أخضر مزرق</option>
+        <option value="navy">كحلي</option>
+        <option value="olive">زيتي</option>
+        <option value="maroon">ماروني</option>
+        <option value="cream">كريمي</option>
+        <option value="champagne">شامبين</option>
+        <option value="lavender">لافندر</option>
+        <option value="coral">مرجاني</option>
+    </select>
+    
+      <button type="submit">أطلب الآن</button>
+    </form>
+    
+  </div>
+<!-- Nouveau tableau des descriptions des produits -->
+<h3>تفاصيل المنتج</h3>
+<div class="product-table">
+  <table id="product-details">
+    <thead>
+      <tr>
+        <th>حجم الشاشة</th>
+        <th>ذاكرة الهاتف</th>
+        <th>الكاميرا الرئيسية للهاتف</th>
+        <th>الكاميرا الأمامية للهاتف</th>
+        <th>بطارية الهاتف</th>
+        <th>نظام تشغيل الهاتف</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="screen-size"></td>
+        <td id="memory"></td>
+        <td id="main-camera"></td>
+        <td id="front-camera"></td>
+        <td id="battery"></td>
+        <td id="os"></td>
+      </tr>
+    </tbody>
+  </table>
+  
+</div>
+  <script src="order.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

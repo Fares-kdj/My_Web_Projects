@@ -1,0 +1,261 @@
+/* Styles CSS intégrés */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: flex-start; /* Aligne verticalement vers le haut */
+    height: 100vh; /* Utilise la hauteur totale de la fenêtre */
+}
+.succes-delete-message {
+    color: green;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.dashboard-container {
+    width: 1000px;
+    margin-top: 50px;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transition: margin-left 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre la table et les autres éléments horizontalement */
+  
+}
+
+  /* Cacher le bouton de menu lorsqu'il a la classe 'hidden' */
+  .menu-button.hidden {
+    display: none;
+    }
+
+/* Ajout d'une marge gauche lorsque la sidebar est ouverte */
+.sidebar.open + .dashboard-container {
+    margin-left: 250px; /* Largeur de la sidebar */
+}
+
+.dashboard-container h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.projects-table {
+    width: 100%;
+    max-width: 1000px; /* Vous pouvez ajuster cette valeur en fonction de votre préférence */
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 56, 89, 0.4); /* Ajoute un petit ombrage au tableau */
+}
+
+.projects-table th,
+.projects-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.projects-table th {
+    background-color: #003859;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.projects-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.projects-table td {
+    color: #555;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.delete-link, .edit-link {
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.delete-link {
+    background-color: #e74c3c;
+}
+
+.delete-link:hover {
+    background-color: #c0392b;
+}
+
+.edit-link {
+    background-color: #2ecc71;
+}
+
+.edit-link:hover {
+    background-color: #27ae60;
+}
+
+.add-project-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #003859;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.add-project-btn:hover {
+    background-color: #ddd;
+    color: #003859;
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Caché par défaut */
+    width: 250px;
+    height: 100%;
+    background-color: #003859;
+    color: white;
+    transition: left 0.3s ease-in-out;
+    padding-top: 60px;
+    z-index: 1000; /* Assure que la sidebar est au-dessus du contenu */
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    transition:  0.3s;
+}
+
+.sidebar a:hover {
+    background: #f4f7f6;
+    color: #003859;
+}
+
+/* Menu button */
+.menu-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #003859;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1001;
+    transition: 0.3s;
+}
+
+.menu-button:hover {
+    background: #ddd;
+    color: #003859;
+}
+
+/* When sidebar is open */
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar-logo {
+    text-align: center;
+    padding: 10px 0 50px;
+}
+
+.sidebar-logo img {
+    max-width: 100px;
+    height: auto;
+}
+.error-message {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    }
+    
+    .success-message {
+    color: green;
+    text-align: center;
+    font-weight: bold;
+    }
+
+/* Responsive Design pour les petits écrans (mobile) */
+@media (max-width: 768px) {
+    /* Rendre la sidebar plus petite ou la cacher */
+    .sidebar {
+        left: -500px; /* Cache la sidebar */
+        width: 100%; /* Prend toute la largeur */
+    }
+
+    .sidebar.open {
+        left: 0; /* Affiche la sidebar lorsqu'elle est ouverte */
+    }
+
+    /* Cacher le bouton de menu sur les petits écrans */
+    .menu-button {
+        display: block; /* Garde le bouton visible sur mobile */
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+  
+
+    /* Ajuster le container du dashboard pour les petits écrans */
+    .dashboard-container {
+        width: 100%; /* Prend toute la largeur de l'écran */
+        margin-top: 70px; /* Réduit la marge supérieure */
+        padding: 5px; /* Réduit le padding */
+    }
+
+    /* Rendre la table défilable horizontalement sur mobile */
+    .projects-table {
+        width: 100%; /* Prend toute la largeur */
+        max-width: none; /* Désactive la largeur maximale */
+        margin-top: 10px; /* Réduit la marge du haut */
+        overflow-x: auto; /* Permet le défilement horizontal */
+        display: block; /* Pour permettre le défilement horizontal */
+    }
+
+    .projects-table th,
+    .projects-table td {
+        padding: 8px; /* Réduit le padding des cellules */
+        font-size: 0.7rem; /* Réduit la taille de la police pour les petits écrans */
+    }
+
+    .projects-table th {
+        text-align: center; /* Aligne les titres au centre */
+    }
+
+    /* Rendre les boutons plus petits */
+    .add-project-btn {
+        padding: 8px 16px; /* Ajuste la taille des boutons */
+    }
+
+    /* Ajuster les actions (éditions et suppression) */
+    .actions {
+        flex-direction: column; /* Affiche les actions en colonne sur mobile */
+        align-items: flex-start;
+    }
+
+    .delete-link, .edit-link {
+        padding: 6px 12px; /* Réduit la taille des boutons d'action */
+    }
+}

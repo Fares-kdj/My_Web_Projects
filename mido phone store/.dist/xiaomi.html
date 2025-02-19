@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ميدو - XIAOMI</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+</head>
+<body>
+  <!-- En-tête -->
+  <header>
+    <div class="navbar">
+      <a href="index.html"><img class="logo" src="assets/call.png" alt=""></a>
+        <h1>مرحبًا بكم في متجر ميدو للهواتف الذكية</h1>
+        <a href="carts.html">
+          <div class="cart-icon">
+            🛒 <span id="cart-count">0</span>
+          </div>
+        </a>
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+  <!-- Menu latéral -->
+  <aside id="sidebar" class="hidden">
+    <span>المنتجات</span>
+   <div class="close-icon" onclick="toggleMenu()">x</div>
+   
+    <ul>
+      <li><a href="index.html">Apple</a></li>
+    <li><a href="samsung.html">Samsung</a></li>
+    <li><a href="xiaomi.html">Xiaomi</a></li>
+    <li><a href="honor.html">Honor</a></li>
+    <li><a href="infinix.html">Infinix</a></li>
+    <li><a href="google.html">Google</a></li>
+    <li><a href="asus.html">Asus</a></li>
+    <li><a href="vivo.html">Vivo</a></li>
+    <li><a href="realme.html">Realme</a></li>
+    <li><a href="oppo.html">Oppo</a></li>
+    </ul>
+  </aside>
+
+  <!-- Section principale -->
+ 
+  <main>
+    <h2>XIAOMI</h2>
+    <div class="product-container">
+     <!-- Carte produit 1 -->
+<div class="product-card">
+  <img src="assets/Xiaomi Mi 10T Lite 5G.png" alt="هاتف">
+  <h3>Xiaomi Mi 10T Lite 5G</h3>
+  <p>أفضل الماركات</p>
+  <p class="price">
+    <span class="old-price">320,000 د.ع</span>
+    <span class="new-price">250,000 د.ع</span>
+  </p>
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <button onclick="navigateToOrder('Xiaomi Mi 10T Lite 5G', 'assets/Xiaomi Mi 10T Lite 5G.png', 320000, 250000, '6.67 بوصة',
+  '128 جيجا بايت',
+  '64 ميجا بكسل',
+  '16 ميجا بكسل',
+  '4870 مللي أمبير',
+  'Android 10، MIUI 12')">
+    اطلب الآن
+  </button>
+  <button onclick="addToCart('Xiaomi Mi 10T Lite 5G', 'assets/Xiaomi Mi 10T Lite 5G.png', 320000, 250000, '6.67 بوصة',
+  '128 جيجا بايت',
+  '64 ميجا بكسل',
+  '16 ميجا بكسل',
+  '4870 مللي أمبير',
+  'Android 10، MIUI 12')">
+    أضف إلى السلة 🛒
+  </button>
+</div>
+
+
+<!-- Carte produit 3 -->
+<div class="product-card">
+  <img src="assets/Xiaomi Mi Mix.I15.png" alt="هاتف">
+  <h3>Xiaomi Mi Mix.I15</h3>
+  <p>سعر مميز 300,000 د.ع</p>
+  <p class="price">
+    <span class="old-price">360,000 د.ع</span>
+    <span class="new-price">300,000 د.ع</span>
+  </p>
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <button onclick="navigateToOrder('Xiaomi Mi Mix.I15', 'assets/Xiaomi Mi Mix.I15.png', 360000, 300000, '6.4 بوصة',
+  '128 جيجا بايت',
+  '48 ميجا بكسل',
+  '25 ميجا بكسل',
+  '3300 مللي أمبير',
+  'Android 9.0')">
+    اطلب الآن
+  </button>
+  <button onclick="addToCart('Xiaomi Mi Mix.I15', 'assets/Xiaomi Mi Mix.I15.png', 360000, 300000, '6.4 بوصة',
+  '128 جيجا بايت',
+  '48 ميجا بكسل',
+  '25 ميجا بكسل',
+  '3300 مللي أمبير',
+  'Android 9.0')">
+    أضف إلى السلة 🛒
+  </button>
+</div>
+
+<!-- Carte produit 4 -->
+<div class="product-card">
+  <img src="assets/Xiaomi Mi Note 10 Lite.png" alt="هاتف">
+  <h3>Xiaomi Mi Note 10 Lite</h3>
+  <p>سعر رائع فقط</p>
+  <p class="price">
+    <span class="old-price">200,000 د.ع</span>
+    <span class="new-price">170,000 د.ع</span>
+  </p>
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <button onclick="navigateToOrder('Xiaomi Mi Note 10 Lite', 'assets/Xiaomi Mi Note 10 Lite.png', 200000, 170000, '6.4 بوصة',
+  '128 جيجا بايت',
+  '64 ميجا بكسل',
+  '16 ميجا بكسل',
+  '5260 مللي أمبير',
+  'Android 10، MIUI 11')">
+    اطلب الآن
+  </button>
+  <button onclick="addToCart('Xiaomi Mi Note 10 Lite', 'assets/Xiaomi Mi Note 10 Lite.png', 200000, 170000, '6.4 بوصة',
+  '128 جيجا بايت',
+  '64 ميجا بكسل',
+  '16 ميجا بكسل',
+  '5260 مللي أمبير',
+  'Android 10، MIUI 11')">
+    أضف إلى السلة 🛒
+  </button>
+</div>
+
+<!-- Carte produit 5 -->
+<div class="product-card">
+  <img src="assets/Xiaomi Mi Note 10.png" alt="هاتف">
+  <h3>Xiaomi Mi Note 10</h3>
+  <p>أرقى الماركات</p>
+  <p class="price">
+    <span class="old-price">300,000 د.ع</span>
+    <span class="new-price">230,000 د.ع</span>
+  </p>
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <button onclick="navigateToOrder('Xiaomi Mi Note 10', 'assets/Xiaomi Mi Note 10.png', 300000, 230000, '6.47 بوصة',
+  '128 جيجا بايت',
+  '108 ميجا بكسل',
+  '32 ميجا بكسل',
+  '5260 مللي أمبير',
+  'Android 9.0، MIUI 11')">
+    اطلب الآن
+  </button>
+  <button onclick="addToCart('Xiaomi Mi Note 10', 'assets/Xiaomi Mi Note 10.png', 300000, 230000, '6.47 بوصة',
+  '128 جيجا بايت',
+  '108 ميجا بكسل',
+  '32 ميجا بكسل',
+  '5260 مللي أمبير',
+  'Android 9.0، MIUI 11')">
+    أضف إلى السلة 🛒
+  </button>
+</div>
+
+<!-- Carte produit 6 -->
+<div class="product-card">
+  <img src="assets/Xiaomi Poco X3 Cobalt.png" alt="هاتف">
+  <h3>Xiaomi Poco X3 Cobalt</h3>
+  <p>أرقى الماركات</p>
+  <p class="price">
+    <span class="old-price"> 240,000 د.ع</span>
+    <span class="new-price"> 190,000 د.ع</span>
+  </p>
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <button onclick="navigateToOrder('Xiaomi Poco X3 Cobalt', 'assets/Xiaomi Poco X3 Cobalt.png', 240000, 190000, '6.67 بوصة',
+  '128 جيجا بايت',
+  '64 ميجا بكسل',
+  '25 ميجا بكسل',
+  '5160 مللي أمبير',
+  ' Android 10، MIUI 12')">
+    اطلب الآن
+  </button>
+  <button onclick="addToCart('Xiaomi Poco X3 Cobalt', 'assets/Xiaomi Poco X3 Cobalt.png', 240000, 190000, '6.67 بوصة',
+  '128 جيجا بايت',
+  '64 ميجا بكسل',
+  '25 ميجا بكسل',
+  '5160 مللي أمبير',
+  ' Android 10، MIUI 12')">
+    أضف إلى السلة 🛒
+  </button>
+</div>
+
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

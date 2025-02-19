@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ميدو - GOOGLE</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+</head>
+<body>
+  <!-- En-tête -->
+  <header>
+    <div class="navbar">
+      <a href="index.html"><img class="logo" src="assets/call.png" alt=""></a>
+        <h1>مرحبًا بكم في متجر ميدو للهواتف الذكية</h1>
+        <a href="carts.html">
+          <div class="cart-icon">
+            🛒 <span id="cart-count">0</span>
+          </div>
+        </a>
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+  <!-- Menu latéral -->
+  <aside id="sidebar" class="hidden">
+    <span>المنتجات</span>
+   <div class="close-icon" onclick="toggleMenu()">x</div>
+   
+    <ul>
+      <li><a href="index.html">Apple</a></li>
+    <li><a href="samsung.html">Samsung</a></li>
+    <li><a href="xiaomi.html">Xiaomi</a></li>
+    <li><a href="honor.html">Honor</a></li>
+    <li><a href="infinix.html">Infinix</a></li>
+    <li><a href="google.html">Google</a></li>
+    <li><a href="asus.html">Asus</a></li>
+    <li><a href="vivo.html">Vivo</a></li>
+    <li><a href="realme.html">Realme</a></li>
+    <li><a href="oppo.html">Oppo</a></li>
+    </ul>
+  </aside>
+
+  <!-- Section principale -->
+ 
+  <main>
+    <h2>GOOGLE</h2>
+    <div class="product-container">
+<!-- Carte produit 1 -->
+<div class="product-card">
+  <img src="assets/Google Pixel 3XL.png" alt="Google Pixel 3XL">
+  <h3>Google Pixel 3XL</h3>
+  <p>أفضل الماركات</p>
+  <p class="price">
+    <span class="old-price"> 850,000 دينار عراقي</span>
+    <span class="new-price"> 580,000 دينار عراقي</span>
+  </p>
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <button onclick="navigateToOrder('Google Pixel 3XL',
+                                   'assets/Google Pixel 3XL.png',
+                                   850000,
+                                   580000,
+                                   '6.3 بوصة',
+                                   '128 جيجا بايت',
+                                   '12.2 ميجا بكسل',
+                                   '8 ميجا بكسل',
+                                   '3700 مللي أمبير',
+                                   'Android 10')">
+    اطلب الآن
+  </button>
+  <button onclick="addToCart('Google Pixel 3XL',
+  'assets/Google Pixel 3XL.png',
+  850000,
+  580000,
+  '6.3 بوصة',
+  '128 جيجا بايت',
+  '12.2 ميجا بكسل',
+  '8 ميجا بكسل',
+  '3700 مللي أمبير',
+  'Android 10')">
+    أضف إلى السلة 🛒
+  </button>
+</div>
+
+<!-- Carte produit 2 -->
+<div class="product-card">
+  <img src="assets/Google Pixel 4 XL Oh So Orange.I16.watermarked.2k.png" alt="Google Pixel 4">
+  <h3>Google Pixel 4</h3>
+  <p>ماركات عالمية</p>
+  <p class="price">
+    <span class="old-price"> 800,000 دينار عراقي</span>
+    <span class="new-price"> 650,000 دينار عراقي</span>
+  </p>
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <button onclick="navigateToOrder('Google Pixel 4',
+                                   'assets/Google Pixel 4 XL Oh So Orange.I16.watermarked.2k.png',
+                                   800000,
+                                   650000,
+                                   '6.3 بوصة',
+                                   '64 جيجا بايت',
+                                   '12.2 ميجا بكسل',
+                                   '8 ميجا بكسل',
+                                   '3700 مللي أمبير',
+                                   'Android 10')">
+    اطلب الآن
+  </button>
+  <button onclick="addToCart('Google Pixel 4',
+  'assets/Google Pixel 4 XL Oh So Orange.I16.watermarked.2k.png',
+  800000,
+  650000,
+  '6.3 بوصة',
+  '64 جيجا بايت',
+  '12.2 ميجا بكسل',
+  '8 ميجا بكسل',
+  '3700 مللي أمبير',
+  'Android 10')">
+    أضف إلى السلة 🛒
+  </button>
+</div>
+
+<!-- Carte produit 3 -->
+<div class="product-card">
+  <img src="assets/Google Pixel 4a Barely Blue.G03.watermarked.2k.png" alt="Google Pixel 4a">
+  <h3>Google Pixel 4a</h3>
+  <p>سعر مميز 6400 دج</p>
+  <p class="price">
+    <span class="old-price">600,000 دينار عراقي</span>
+    <span class="new-price">500,000 دينار عراقي</span>
+  </p>
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <button onclick="navigateToOrder('Google Pixel 4a',
+                                   'assets/Google Pixel 4a Barely Blue.G03.watermarked.2k.png',
+                                   600000,
+                                   500000,
+                                   '5.8 بوصة',
+                                   '128 جيجا بايت',
+                                   '12.2 ميجا بكسل',
+                                   '8 ميجا بكسل',
+                                   '3140 مللي أمبير',
+                                   'Android 10')">
+    اطلب الآن
+  </button>
+  <button onclick="addToCart('Google Pixel 4a',
+  'assets/Google Pixel 4a Barely Blue.G03.watermarked.2k.png',
+  600000,
+  500000,
+  '5.8 بوصة',
+  '128 جيجا بايت',
+  '12.2 ميجا بكسل',
+  '8 ميجا بكسل',
+  '3140 مللي أمبير',
+  'Android 10')">
+    أضف إلى السلة 🛒
+  </button>
+</div>
+
+
+<!-- Carte produit 4 -->
+<div class="product-card">
+  <img src="assets/Google Pixel 5 Sorta sage.H15.watermarked.2k.png" alt="Google Pixel 5">
+  <h3>Google Pixel 5</h3>
+  <p>سعر رائع فقط</p>
+  <p class="price">
+    <span class="old-price"> 1,000,000 دينار عراقي</span> 
+    <span class="new-price"> 850,000 دينار عراقي</span>
+  </p>
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <button onclick="navigateToOrder('Google Pixel 5',
+                                   'assets/Google Pixel 5 Sorta sage.H15.watermarked.2k.png',
+                                   1000000,
+                                   850000,
+                                   '6.0 بوصة',
+                                   '128 جيجا بايت',
+                                   '12.2 ميجا بكسل',
+                                   '8 ميجا بكسل',
+                                   '4080 مللي أمبير',
+                                   'Android 11')">
+    اطلب الآن
+  </button>
+  <button onclick="addToCart('Google Pixel 5',
+  'assets/Google Pixel 5 Sorta sage.H15.watermarked.2k.png',
+  1000000,
+  850000,
+  '6.0 بوصة',
+  '128 جيجا بايت',
+  '12.2 ميجا بكسل',
+  '8 ميجا بكسل',
+  '4080 مللي أمبير',
+  'Android 11')">
+    أضف إلى السلة 🛒
+  </button>
+</div>
+
+
+
+
+    </div>
+
+
+
+  </main>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
